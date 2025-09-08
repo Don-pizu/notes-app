@@ -108,7 +108,7 @@ exports.resendOtp = async (req, res) => {
 
     // Generate new OTP
     const otp = Math.floor(100000 + Math.random() * 900000).toString();
-    const otpExpires = Date.now() + 10 * 60 * 1000; // 10 min
+    const otpExpires = new Date(Date.now() + 10 * 60 * 1000) // 10 min
 
     user.otp = otp;
     user.otpExpires = otpExpires;

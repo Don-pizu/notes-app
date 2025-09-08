@@ -36,21 +36,42 @@ node server.js
 
 project-root/
 ├── controllers/
-  |-- authController.js
+│   ├── authController.js
+│   └── noteController.js
 ├── models/
-  |-- User.js
+│   ├── User.js
+│   └── Note.js
 ├── routes/ 
-  |-- authRoutes.js
+│   ├── authRoutes.js
+│   └── noteRoutes.js
 ├── middleware/
+│   └── authMiddleware.js
 ├── config/
-  |-- db.js
+│   └── db.js
 ├── tests/
-|-- utility
-  |-- emailService
+├── utility/
+│   └── emailService.js
 ├── server.js
 ├── .env
 ├── .gitignore
 └── README.md
+
+# API Routes
+# Authentication Routes (/api/auth)
+Method  	Endpoint	            Description
+POST	   /auth/signup	          Register a new user (with OTP verification)
+POST	   /auth/verifyOtp        Verify OTP for user signup
+POST	   /auth/resendOtp	      Resend OTP if expired
+POST	   /auth/login	          Login and receive JWT token
+
+
+# Note Routes (/api/note)      (Protected – requires JWT)
+Method	    Endpoint	             Description
+POST	    /note	                 Create a new note
+GET	        /note	                 Get all notes for the logged-in user
+GET	        /note/:id	             Get a specific note by ID
+PUT	        /note/:id	             Update a note (only by the owner)
+DELETE	    /note/:id	             Delete a note (only by the owner)
 
 
 ## Technologies used
