@@ -36,11 +36,17 @@ node server.js
 
 project-root/
 ├── controllers/
+  |-- authController.js
 ├── models/
+  |-- User.js
 ├── routes/ 
+  |-- authRoutes.js
 ├── middleware/
 ├── config/
+  |-- db.js
 ├── tests/
+|-- utility
+  |-- emailService
 ├── server.js
 ├── .env
 ├── .gitignore
