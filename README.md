@@ -84,6 +84,11 @@ DELETE	    /note/:id	             Delete a note (only by the owner)
 -Helmet, Express-rate-limit, Mongo-sanitize, XSS-clean
 
 
+## Deployed link
+  https://notes-app-55ha.onrender.com
+
+
+
 ## Author name
 
 -Asiru Adedolapo
