@@ -23,5 +23,5 @@ exports.sendOtpEmail = async (to, otp) => {
     html: `<p>Your OTP is <b>${otp}</b>. It expires in 10 minutes.</p>`
   });
 
-  console.log(`OTP sent to ${to}: ${otp}`); // dev log
+  //console.log(`OTP sent to ${to}: ${otp}`); // dev log
 };
